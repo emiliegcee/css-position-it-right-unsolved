@@ -10,6 +10,24 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+triangle-up {
+  border-left: 25px solid pink;
+  border-right: 25px solid red;
+  border-bottom: 50px solid green;
+}
+
+.trapezoid-down {
+  position: absolute;
+  top: 50px;
+  width: 60%;
+  right: 20%;
+  height: 50px;
+  border-left: 30px solid greenyellow;
+  border-right: 35px solid green;
+  border-top: 30px solid blue;
+ 
+}
+
 body {
   background-color: black;
   display: flex;
@@ -101,3 +119,5 @@ header.exercise-header {
 .exercise p {
   line-height: 24px;
 }
+
+
