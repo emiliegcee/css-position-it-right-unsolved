@@ -1,6 +1,7 @@
 .legal-header {
+  position: fixed;
   background-color: white;
-  padding: 30px;
+  padding: 10px;
   margin-top: 60px;
   width: 100%;
 }
@@ -8,23 +9,25 @@
 .legal-header h1 {
   width: 100%;
   max-width: 900px;
-  margin: 0 auto;
+  margin: 100;
+  justify-content: space-between;
 }
 
 main { 
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 30px;
+  justify-content: space-between;
+  gap: 10px;
   max-width: 900px;
   margin: 0 auto;
-  padding: 30px;
+  padding: 10px;
 }
 
 section {
   display: flex;
-  gap: 30px;
-  position: relative;
+  gap: 100px;
+  position: static;
+  top: 60px;
   border-bottom: 1px solid grey;
   padding: 30px;
   max-width: 900px;
@@ -32,48 +35,82 @@ section {
   color: white;
 }
 
-.section-label {
-  width: 100%;
+.section-label1 {
+  position: sticky;
+  display: static;
+  top:20%;
+  left: 25px;
+  width: 15%;
   background-color: #2b2d3b;
-  height: max-content;
+  height: 10%;
+  padding: 10px 16px;
+}
+.section-label2 {
+  position: sticky;
+  display: static;
+  top:20%;
+  left: 25px;
+  width: 15%;
+  background-color: #2b2d3b;
+  height: 10%;
+  padding: 10px 16px;
+}
+
+.section-label3 {
+  position: sticky;
+  display: fixed;
+  top:20%;
+  left: 25px;
+  width: 15%;
+  background-color: #2b2d3b;
+  height: 10%;
   padding: 10px 16px;
 }
 
 .document-content {
-  display: flex;
+  display: fixed;
   flex-direction: column;
   gap: 30px;
   max-width: 600px;
-}
-
-.document-content p {
   line-height: 28px;
 }
 
+.document-content p {
+  display: fixed;
+  line-height: 28px;
+
+}
+
 .document-content ol {
+  display: fixed;
   margin: 0;
   padding-left: 40px;
 }
 
 .document-content li {
+  display: fixed;
   line-height: 28px;
 }
 
 footer {
   display: flex;
-  align-items: center;
+  position: fixed;
   width: 100%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
   background-color: #e2e2e2;
-  padding: 0 30px;
-  min-height: 70px;
+  padding: 0 0px;
+  min-height: 40px;
 }
 
 .footer-content {
   width: 100%;
   max-width: 900px;
   display: flex;
-  gap: 50px;
-  justify-content: space-between;
+  position: absolute;
+  gap: 0px;
+  justify-content: normal;
   align-items: center;
   margin: 0 auto;
 }
@@ -84,8 +121,8 @@ footer {
   background-color: blueviolet;
   outline: none;
   border: none;
-  color: white;
-  cursor: pointer;
+  color: black;
+  cursor: grab;
   transition: all 0.4s ease-in-out;
 }
 
