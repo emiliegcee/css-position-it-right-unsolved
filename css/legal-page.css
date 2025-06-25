@@ -4,12 +4,13 @@
   padding: 10px;
   margin-top: 60px;
   width: 100%;
+  z-index: 10;
 }
 
 .legal-header h1 {
   width: 100%;
   max-width: 900px;
-  margin: 100;
+  margin: 0;
   justify-content: space-between;
 }
 
@@ -21,6 +22,8 @@ main {
   max-width: 900px;
   margin: 0 auto;
   padding: 10px;
+  justify-content: center;
+  margin-top: 90px;
 }
 
 section {
@@ -37,38 +40,34 @@ section {
 
 .section-label1 {
   position: sticky;
-  display: static;
   top:20%;
   left: 25px;
   width: 15%;
   background-color: #2b2d3b;
-  height: 10%;
+  height: 5%;
   padding: 10px 16px;
 }
 .section-label2 {
   position: sticky;
-  display: static;
   top:20%;
   left: 25px;
   width: 15%;
   background-color: #2b2d3b;
-  height: 10%;
-  padding: 10px 16px;
+  height: 5%;
+  padding: 5px 16px;
 }
 
 .section-label3 {
   position: sticky;
-  display: fixed;
   top:20%;
   left: 25px;
   width: 15%;
   background-color: #2b2d3b;
-  height: 10%;
+  height: 5%;
   padding: 10px 16px;
 }
 
 .document-content {
-  display: fixed;
   flex-direction: column;
   gap: 30px;
   max-width: 600px;
@@ -76,19 +75,19 @@ section {
 }
 
 .document-content p {
-  display: fixed;
+
   line-height: 28px;
 
 }
 
 .document-content ol {
-  display: fixed;
+
   margin: 0;
   padding-left: 40px;
 }
 
 .document-content li {
-  display: fixed;
+
   line-height: 28px;
 }
 
