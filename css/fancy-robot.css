@@ -1,3 +1,77 @@
+@keyframes slide-in {
+  0% {
+    transform: translateY(40%);
+  }
+  100% {
+    transform: translateX(40%);
+  }
+  }
+
+  @keyframes disappear {
+    0% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 0.75;
+    }
+    50% {
+      opacity: 0.5; 
+    }
+    75% {
+      opacity: 0.25;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes upDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes sun-rise {
+  from {
+    transform: translateY(110vh);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes moveAndColor {
+  0% {
+    top: 0;
+    background-color: red;
+  }
+  50% {
+    top: 50px;
+    background-color: blue;
+  }
+  100% {
+    top: 100px;
+    background-color: green;
+  }
+}
+
+@keyframes resize {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.25);
+  }
+}
+
 .robot-container { 
   position: relative;
   width: 500px;
@@ -8,6 +82,10 @@
   box-shadow: 5px 10px 20px rgba(3, 234, 45, 0.921);
   transform: matrix(1, -0.3, 0, 1, 0, 0);
 }
+
+/* .robot-container:hover {
+  animation: sun-rise 5s;
+} */
 
 .robot-face-shape {
   position: relative;
@@ -28,13 +106,10 @@
   height: 40px;
   background-color: rgb(0, 9, 0);
   border-radius: 0%;
-  box-shadow: 0 10px 20px;
 }
 
 .robot-eye-left {
-  transition: 3s infinite ease-in-out;
-  background-color: rgb(240, 17, 180);
-  border-radius: 50%;
+ animation: spin 5s linear infinite;
 }
 
 .robot-eye-right { 
@@ -60,9 +135,9 @@
   }
 
   .triangle-up {
-    transition: all ease-in-out;
-}
-
+    animation: resize 3s infinite;
+} 
+  
 .robot-ear-left { 
   position: absolute;
   top: 50px;
@@ -74,6 +149,10 @@
   box-shadow: 0 0px 5px rgba(223, 11, 11, 0.2);
 }
 
+.robot-ear-left {
+  animation: moveAndColor 3s infinite;
+}
+
 .robot-ear-right {
   position: absolute;
   top: 50px;
@@ -81,9 +160,14 @@
   width: 40px;
   height: 100px;
   background-image: url("https://www.campervaniceland.com/assets/img/blog/333.png");
-  background-size: contain;
+  background-size: cover;
   border-radius: 10%;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.robot-ear-right:hover {
+  background-image: url(https://images.unsplash.com/vector-1738324530539-f43448c1321a?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
 }
 
 .robot-nose {
@@ -99,7 +183,7 @@
 }
 .robot-nose {
   background-color: rgb(255, 0, 0);
-  animation: upDown 3s ease-in-out infinite;
+  animation: linear 3s alternate infinite slide-in;
 }
 
 .robot-teeth {
@@ -114,11 +198,10 @@
   border-radius: 50px;
   box-shadow: 0 2px 5px rgba(229, 218, 218, 0.2);
 }
-/* 
+
 .robot-teeth {
-  opacity: 1.0;
-  transition: opacity(0.0)  0.5s ease-in-out;
-} */
+  animation: disappear 5s ease-in-out infinite;
+}
 
 .robot-tooth1 {
   position: absolute;
@@ -160,8 +243,6 @@
   border-radius: 50px;  
 }
 
-
-
 .robot-hair-style {
   position: absolute;
   top: -100px;
@@ -171,15 +252,6 @@
   height: 200px;
   background-color: transparent;
   border-radius: 0px;
-}
-
-@keyframes upDown {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
 }
 
 .robot-hair-one {
